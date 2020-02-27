@@ -1,0 +1,94 @@
+---
+title: "Glioma Abstract Analysis"
+output: html_notebook
+---
+
+## Glioma Analysis
+
+Your task? Investigate changes in glioma-related abstracts from PubMed between 2005 and 2009.
+
+
+
+## Load your data by running script
+
+```{r}
+glioma_2005 <- readRDS("https://github.com/neonseri/presentationrepo/blob/master/glioma_2005.rds?raw=true")
+glioma_2009 <- readRDS("https://github.com/neonseri/presentationrepo/blob/master/glioma_2009.rds?raw=true")
+```
+
+
+## Inspect data 
+
+Text data is inherently messy.  Run the code below to examine the basic structure of the data by printing only the first row of data.
+
+```{r}
+head(glioma_2005, 1)
+```
+
+```{r}
+head(glioma_2009, 1)
+```
+
+
+## How many rows of data do you have?  Use nrow()
+
+
+```{r}
+nrow(glioma_2005, 1)
+```
+
+```{r}
+nrow(???, 1)
+```
+
+
+## Investigating mentions of `stem cell` using grepl() for 2005
+
+grepl returns TRUE/FALSE statements if patterns of interest appear. 
+
+```{r}
+glioma_2005$stemcell <- grepl("stem cell", glioma_2005$text, ignore.case = TRUE)
+head(glioma_2005$stemcell, 5)
+```
+
+One way to count number of stem cell glioma articles is by summing up the TRUE and FALSE. TRUE gets treated as 1, FALSE gets treated as 0 by the sum() function.  How many articles mentioned stem cell?
+
+```{r}
+sum(glioma_2005$stemcell)
+```
+
+## Performing the previous task for 2009
+
+```{r}
+???
+```
+
+
+
+```{r}
+???
+```
+
+
+
+## Quick Stop
+
+Did you notice anything interesting about stem cell mentions in 2005 vs 2009?
+
+
+
+
+## Feel free to investigate other trends you may want to check.
+
+
+
+
+## Other things you might want to check
+
+
+If you are interested in exploring a popular package called tidytext, let us work on it in this section (feel free to call me).
+
+
+
+
+
